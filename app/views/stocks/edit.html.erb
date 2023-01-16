@@ -1,0 +1,14 @@
+<h1>Editing stock</h1>
+<table class="table">
+<%= render "form", stock: @stock %>
+</table>
+
+</table>
+<br>
+
+<div>
+  <%= link_to "Show ", @stock,class:"btn btn-dark" %> |
+  <%= link_to "Back ", stocks_path,class:"btn btn-dark" %>
+  <%= button_to "Delete", @stock, method: :delete ,class:"btn btn-dark" %>
+
+</div>

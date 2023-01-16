@@ -1,0 +1,20 @@
+
+<%if user_signed_in? %>
+<h1>Stocks</h1>
+
+<div id="stocks">
+  <% @stocks.each do |stock| %>
+  <% if stock.user == current_user%>
+
+    <%= render stock %>
+    <p>
+      <%= link_to "Show ", stock, class:"btn btn-dark" %>
+    </p>
+  <% end %>
+    <% end %>
+</div>
+
+<%= link_to "New stock", new_stock_path, class:"btn btn-dark" %>
+<% else%>
+<h1> Welcome</h1>
+<%end%>
